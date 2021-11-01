@@ -1,0 +1,5 @@
+build/
+ids/
+build_win32/
+compile_commands.json
+.vscode/
