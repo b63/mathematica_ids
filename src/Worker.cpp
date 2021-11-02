@@ -56,9 +56,14 @@ void Worker::received_image(std::shared_ptr<Image> img)
     if (!img) return;
 
     printf("Worker: received %lu x %lu image\n", img->w, img->h);
-    // TODO: maybe have QImage clean up img->data buffer instead of making copy
-    QImage qimg{(uchar*)(img->data), (int)img->w, (int)img->h, QImage::Format_RGB32};
-    emit display_image(qimg.copy());
+    int *buffer = img->release();
+    QImage qimg{(uchar*)(buffer), (int)img->w, (int)img->h, QImage::Format_RGB32,
+            [] (void *ptr) {
+                delete[] (int*)ptr;
+            },
+            buffer
+        };
+    emit display_image(qimg);
 }
 
 int Worker::yield_callback(State state, int count)
@@ -78,8 +83,6 @@ std::shared_ptr<Image> Worker::get_camera_image()
     {
         printf("Woker: getting camera image\n");
         ptr_image img {m_camera->get_image()};
-        if (!img)
-            throw "null image";
         return img;
     }
     catch (const char *e)
@@ -107,7 +110,7 @@ void Worker::initialize(bool full)
     try {
         if (!m_camera)
         {
-            m_camera = new IDSCamera();
+            m_camera = new TestCamera(1080, 1280);
         }
         else
         {

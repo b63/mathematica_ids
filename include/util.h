@@ -17,6 +17,13 @@ struct Image {
         : data (data), w (w), h (h) 
         {}
 
+    inline int *release()
+    {
+        int * cpy = data;
+        data = nullptr;
+        return cpy;
+    }
+
     inline ~Image() {
         if (data) delete[] data;
     }

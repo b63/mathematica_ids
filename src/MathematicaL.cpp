@@ -488,15 +488,71 @@ int MathematicaL::command_get()
         return 1;
     }
 
-    const long dims[] {(long)img->h, (long)img->w};
+    const long dims[] {(long)img->h, (long)img->w, 3};
+    // expand each 4-byte into 3 RGB values
+    size_t N = img->h*img->w;
+    int *data = new int[N*3]; // seems to be too large to allocate on stack - causes segfault
+    rgb_to_rgb3(data, img->data, N, 3);
 
     fprintf_l(stdout, "WSTP: sending %lix%li\n", dims[1], dims[0]);
 
-    WSPutIntegerArray(mlp, img->data, dims, NULL, 2); // note: blocks!
+    WSPutIntegerArray(mlp, data, dims, NULL, 3); // note: blocks!
     WSEndPacket(mlp);
+    delete[] data;
 
     return 0;
 }
+
+void rgb_to_rgb3(int *dst, const int *src, const size_t N, const size_t channels)
+{
+    int *ptr = dst;
+    const int *src_ptr = src;
+    const int *src_ptr_end = src+N;
+
+    while (src_ptr != src_ptr_end)
+    {
+        for (size_t i = 0; i < channels; ++i)
+        {
+            *(ptr+i) = (((*src_ptr) >> (8*i)) & 0xff);
+        }
+
+        ptr += channels;
+        ++src_ptr;
+    }
+}
+
+void rgb3_to_rgb(int *dst, const int *src, const size_t N, const size_t channels)
+{
+    int *ptr = dst;
+    const int *dst_ptr_end = dst+N;
+    const int *src_ptr = src;
+    while (ptr != dst_ptr_end)
+    {
+        *ptr = 0;
+        for (size_t i = 0; i < channels; ++i)
+        {
+            *ptr |= ((*(src_ptr+i) & 0xff) << (i*8));
+        }
+
+        src_ptr += channels;
+        ++ptr;
+    }
+}
+
+void bw_to_rgb(int *dst, const int *src, const size_t N)
+{
+    int *ptr = dst;
+    const int *dst_ptr_end = dst+N;
+    const int *src_ptr = src;
+    while (ptr != dst_ptr_end)
+    {
+        int val = (*src_ptr & 0xff);
+        *ptr = ((val << 16) | (val << 8) | val);
+        ++src_ptr;
+        ++ptr;
+    }
+}
+
 
 int MathematicaL::command_send()
 {
@@ -517,18 +573,25 @@ int MathematicaL::command_send()
         return 1;
     }
 
-    if (d != 2) {
-        fprintf_l(stderr, "WSTP: dimension of array is not two, given %ld\n", d);
+    if (d != 2 && d != 3) {
+        fprintf_l(stderr, "WSTP: dimension of array is not two or three, given %ld\n", d);
         WSReleaseIntegerArray(mlp, data, dims, heads, d);
         return 1;
     }
 
     if (hook_send)
     {
-        size_t N = dims[0]*dims[1];
+        const size_t N = dims[0]*dims[1];
         int *cdata = new int[N];
-        memcpy(cdata, data, N*sizeof(int));
+        if (d == 2) {
+            // gray scale image
+            bw_to_rgb(cdata, data, N);
+        } else {
+            // rgb image
+            rgb3_to_rgb(cdata, data, N, 3);
+        }
 
+        // cdata memory will be release by ~Image
         std::shared_ptr<Image> img {std::make_shared<Image>(cdata, dims[1], dims[0])};
         hook_send(img);
     }

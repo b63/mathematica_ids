@@ -39,12 +39,9 @@ ptr_image TestCamera::get_image()
     static std::default_random_engine engine;
     static std::uniform_int_distribution<int> dist(0, 255);
 
-    ptr_image img{std::make_shared<Image>()};
-    img->w = m_width;
-    img->h = m_height;
-
     const size_t N = m_height*m_width;
-    img->data = new int[N];
+    ptr_image img{std::make_shared<Image>(new int[N], m_width, m_height)};
+
 
     for (auto i = 0; i < N; ++i)
         (img->data)[i]=((dist(engine) << 16)
@@ -57,6 +54,7 @@ ptr_image TestCamera::get_image()
 IDSCamera::IDSCamera()
     : Camera()
 {
+    m_exposure = -1;
     peak::Library::Initialize();
 }
 
@@ -76,7 +74,10 @@ void IDSCamera::set_double_property(const std::string &name, double value)
 {
     if(!m_nodemap) throw "NodeMap unavailable, device uninitialized";
     if (name == "exposure")
+    {
         m_nodemap->FindNode<peak::core::nodes::FloatNode>("ExposureTime")->SetValue(value);
+        m_exposure = value;
+    }
     else if (name == "gain")
         m_nodemap->FindNode<peak::core::nodes::FloatNode>("Gain")->SetValue(value);
     else
@@ -86,11 +87,13 @@ void IDSCamera::set_double_property(const std::string &name, double value)
 ptr_image IDSCamera::get_image()
 {
     open_data_stream();
-    m_stream->StartAcquisition(peak::core::AcquisitionStartMode::Default, 1);
+    m_stream->StartAcquisition(peak::core::AcquisitionStartMode::Default, 5);
     m_nodemap->FindNode<peak::core::nodes::IntegerNode>("TLParamsLocked")->SetValue(1);
     m_nodemap->FindNode<peak::core::nodes::CommandNode>("AcquisitionStart")->Execute();
 
     try {
+        m_stream->WaitForFinishedBuffer(1000);
+        m_stream->WaitForFinishedBuffer(1000);
         const auto buffer = m_stream->WaitForFinishedBuffer(1000);
 
         const auto image = peak::BufferTo<peak::ipl::Image>(buffer);
@@ -106,7 +109,7 @@ ptr_image IDSCamera::get_image()
 
         // Queue buffer so that it can be used again
         m_stream->QueueBuffer(buffer);
-        
+
         m_nodemap->FindNode<peak::core::nodes::CommandNode>("AcquisitionStop")->Execute();
         m_nodemap->FindNode<peak::core::nodes::IntegerNode>("TLParamsLocked")->SetValue(0);
         m_stream->StopAcquisition(peak::core::AcquisitionStopMode::Default);
@@ -227,9 +230,16 @@ void IDSCamera::reset_params()
         //fprintf(stderr, "IDSCamera: %s\n", e.what());
     }
 
-    // set minimum exposure time
-    double minExposureTime =m_nodemap->FindNode<peak::core::nodes::FloatNode>("ExposureTime")->Minimum();
-    m_nodemap->FindNode<peak::core::nodes::FloatNode>("ExposureTime")->SetValue(minExposureTime);
+    if (m_exposure > 0)
+    {
+        m_nodemap->FindNode<peak::core::nodes::FloatNode>("ExposureTime")->SetValue(m_exposure);
+    }
+    else
+    {
+        // set minimum exposure time
+        double minExposureTime =m_nodemap->FindNode<peak::core::nodes::FloatNode>("ExposureTime")->Minimum();
+        m_nodemap->FindNode<peak::core::nodes::FloatNode>("ExposureTime")->SetValue(minExposureTime);
+    }
 
     double min_gain = m_nodemap->FindNode<peak::core::nodes::FloatNode>("Gain")->Minimum();
     m_nodemap->FindNode<peak::core::nodes::FloatNode>("Gain")->SetValue(min_gain);

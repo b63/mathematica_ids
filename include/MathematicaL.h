@@ -26,6 +26,10 @@ typedef std::function<std::shared_ptr<Image>()> hook_get_t;
 typedef std::function<void(std::shared_ptr<Image>)> hook_send_t;
 typedef std::function<void(const std::string&, double)> hook_set_prop_t;
 
+void rgb_to_rgb3(int *dst, const int *src, const size_t N, const size_t channels = 3);
+void rgb3_to_rgb(int *dst, const int *src, const size_t N, const size_t channels = 3);
+void bw_to_rgb(int *dst, const int *src, size_t N);
+
 
 class MathematicaL {
     public:
