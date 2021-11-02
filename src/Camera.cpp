@@ -106,7 +106,10 @@ ptr_image IDSCamera::get_image()
 
         // Queue buffer so that it can be used again
         m_stream->QueueBuffer(buffer);
+        
+        m_nodemap->FindNode<peak::core::nodes::CommandNode>("AcquisitionStop")->Execute();
         m_nodemap->FindNode<peak::core::nodes::IntegerNode>("TLParamsLocked")->SetValue(0);
+        m_stream->StopAcquisition(peak::core::AcquisitionStopMode::Default);
 
         return img;
     }

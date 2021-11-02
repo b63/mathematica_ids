@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget* parent)
     setCentralWidget(widget);
 
     m_layout->setContentsMargins(0,0,0,0);
-    setWindowFlags(Qt::CustomizeWindowHint);
+    //setWindowFlags(Qt::CustomizeWindowHint);
 
     // Create a display for the camera image
     m_display = new ImageDisplay(widget);
