@@ -91,16 +91,18 @@ ptr_image IDSCamera::get_image()
     m_nodemap->FindNode<peak::core::nodes::IntegerNode>("TLParamsLocked")->SetValue(1);
     m_nodemap->FindNode<peak::core::nodes::CommandNode>("AcquisitionStart")->Execute();
 
+    ptr_image img;
+
     try {
-        m_stream->WaitForFinishedBuffer(1000);
-        m_stream->WaitForFinishedBuffer(1000);
-        const auto buffer = m_stream->WaitForFinishedBuffer(1000);
+        m_stream->WaitForFinishedBuffer(m_timeout);
+        m_stream->WaitForFinishedBuffer(m_timeout);
+        const auto buffer = m_stream->WaitForFinishedBuffer(m_timeout);
 
         const auto image = peak::BufferTo<peak::ipl::Image>(buffer);
         size_t w = image.Width();
         size_t h = image.Height();
 
-        ptr_image img {std::make_shared<Image>(new int[w*h], w, h)};
+        img = std::make_shared<Image>(new int[w*h], w, h);
 
         image.ConvertTo(
             peak::ipl::PixelFormatName::BGRa8, (uint8_t*)img->data, 
@@ -109,12 +111,6 @@ ptr_image IDSCamera::get_image()
 
         // Queue buffer so that it can be used again
         m_stream->QueueBuffer(buffer);
-
-        m_nodemap->FindNode<peak::core::nodes::CommandNode>("AcquisitionStop")->Execute();
-        m_nodemap->FindNode<peak::core::nodes::IntegerNode>("TLParamsLocked")->SetValue(0);
-        m_stream->StopAcquisition(peak::core::AcquisitionStopMode::Default);
-
-        return img;
     }
     catch (const peak::core::TimeoutException& e)
     {
@@ -126,6 +122,12 @@ ptr_image IDSCamera::get_image()
         fprintf(stderr, "IDSCamera: failed acquisition - %s\n", e.what());
         return nullptr;
     }
+
+    m_nodemap->FindNode<peak::core::nodes::CommandNode>("AcquisitionStop")->Execute();
+    m_nodemap->FindNode<peak::core::nodes::IntegerNode>("TLParamsLocked")->SetValue(0);
+    m_stream->StopAcquisition(peak::core::AcquisitionStopMode::Default);
+
+    return img;
 }
 
 void IDSCamera::deinitialize()

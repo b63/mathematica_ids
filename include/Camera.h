@@ -49,6 +49,7 @@ class IDSCamera : public Camera
 
     private:
         double m_exposure;
+        size_t m_timeout = 10000;
         std::shared_ptr<peak::core::Device> m_device;
         std::shared_ptr<peak::core::DataStream> m_stream;
         std::shared_ptr<peak::core::NodeMap> m_nodemap;
