@@ -110,7 +110,7 @@ void Worker::initialize(bool full)
     try {
         if (!m_camera)
         {
-            m_camera = new TestCamera(1080, 1280);
+            m_camera = new IDSCamera();
         }
         else
         {
