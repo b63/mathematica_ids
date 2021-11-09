@@ -8,7 +8,7 @@ if (WIN32)
     set (CMAKE_CXX_COMPILER cl.exe)
     find_package (Threads REQUIRED)
     set(WSTPLINK_PATH "C:/Program Files/Wolfram Research/Mathematica/12.3/SystemFiles/Links/WSTP/DeveloperKit/Windows-x86-64")
-    
+
     set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} 
         "C:/Program Files/IDS/ids_peak/sdk/api/cmake_finder"
         "C:/Program Files/IDS/ids_peak/sdk/ipl/cmake_finder"

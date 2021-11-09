@@ -94,8 +94,6 @@ ptr_image IDSCamera::get_image()
     ptr_image img;
 
     try {
-        m_stream->WaitForFinishedBuffer(m_timeout);
-        m_stream->WaitForFinishedBuffer(m_timeout);
         const auto buffer = m_stream->WaitForFinishedBuffer(m_timeout);
 
         const auto image = peak::BufferTo<peak::ipl::Image>(buffer);
@@ -180,13 +178,15 @@ void IDSCamera::open_data_stream()
     else
     {
          // Flush queue and prepare all buffers for revoking
-          m_stream->Flush(peak::core::DataStreamFlushMode::DiscardAll);
- 
-          // Clear all old buffers
-          for (const auto& buffer : m_stream->AnnouncedBuffers())
-          {
-              m_stream->RevokeBuffer(buffer);
-          }
+        m_stream->KillWait();
+        m_stream->StopAcquisition(peak::core::AcquisitionStopMode::Default);
+        m_stream->Flush(peak::core::DataStreamFlushMode::DiscardAll);
+
+        // Clear all old buffers
+        for (const auto& buffer : m_stream->AnnouncedBuffers())
+        {
+            m_stream->RevokeBuffer(buffer);
+        }
 
     }
 
