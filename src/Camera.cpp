@@ -164,18 +164,7 @@ void IDSCamera::open_data_stream()
     if (!m_nodemap) throw "no NodeMap for device";
 
     // Open standard data stream
-    if (!m_stream)
-    {
-        auto dataStreams = m_device->DataStreams();
-        if (dataStreams.empty())
-        {
-            m_device.reset();
-            throw "device has no DataStream";
-        }
-
-        m_stream = dataStreams.at(0)->OpenDataStream();
-    }
-    else
+    if (m_stream)
     {
          // Flush queue and prepare all buffers for revoking
         m_stream->KillWait();
@@ -187,8 +176,16 @@ void IDSCamera::open_data_stream()
         {
             m_stream->RevokeBuffer(buffer);
         }
-
     }
+
+    auto dataStreams = m_device->DataStreams();
+    if (dataStreams.empty())
+    {
+        m_device.reset();
+        throw "device has no DataStream";
+    }
+
+    m_stream = dataStreams.at(0)->OpenDataStream();
 
     reset_params();
 
