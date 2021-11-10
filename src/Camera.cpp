@@ -87,7 +87,7 @@ void IDSCamera::set_double_property(const std::string &name, double value)
 ptr_image IDSCamera::get_image()
 {
     open_data_stream();
-    m_stream->StartAcquisition(peak::core::AcquisitionStartMode::Default, 5);
+    m_stream->StartAcquisition(peak::core::AcquisitionStartMode::Default, 1);
     m_nodemap->FindNode<peak::core::nodes::IntegerNode>("TLParamsLocked")->SetValue(1);
     m_nodemap->FindNode<peak::core::nodes::CommandNode>("AcquisitionStart")->Execute();
 
