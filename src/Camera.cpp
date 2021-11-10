@@ -167,7 +167,6 @@ void IDSCamera::open_data_stream()
     if (m_stream)
     {
          // Flush queue and prepare all buffers for revoking
-        m_stream->KillWait();
         m_stream->StopAcquisition(peak::core::AcquisitionStopMode::Default);
         m_stream->Flush(peak::core::DataStreamFlushMode::DiscardAll);
 
