@@ -31,9 +31,12 @@ private:
 
     Worker* m_worker;
     QThread m_thread;
+    bool m_title;
 
     void destroy_all();
     void destroy_quit();
+    void toggle_title_bar(bool state);
+
 };
 
 #endif

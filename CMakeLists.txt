@@ -13,7 +13,7 @@ if (WIN32)
         "C:/Program Files/IDS/ids_peak/sdk/api/cmake_finder"
         "C:/Program Files/IDS/ids_peak/sdk/ipl/cmake_finder"
     )
-    set (CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH};C:/Qt/6.0.4/msvc2019_64")
+    set (CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH};C:/Qt/6.2.1/msvc2019_64")
 
     set(CMAKE_BINARY_DIR "${CMAKE_SOURCE_DIR}/build_win32")
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin_win32")

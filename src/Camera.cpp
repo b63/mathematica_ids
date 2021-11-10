@@ -177,16 +177,19 @@ void IDSCamera::open_data_stream()
             m_stream->RevokeBuffer(buffer);
         }
     }
-
-    auto dataStreams = m_device->DataStreams();
-    if (dataStreams.empty())
+    else 
     {
-        m_device.reset();
-        throw "device has no DataStream";
+        auto dataStreams = m_device->DataStreams();
+            if (dataStreams.empty())
+            {
+                m_device.reset();
+                throw "device has no DataStream";
+            }
+
+        m_stream = dataStreams.at(0)->OpenDataStream();
     }
 
-    m_stream = dataStreams.at(0)->OpenDataStream();
-
+    
     reset_params();
 
     // Get the payload size for correct buffer allocation

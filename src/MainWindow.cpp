@@ -24,6 +24,7 @@ MainWindow::MainWindow(QWidget* parent)
 
     m_layout->setContentsMargins(0,0,0,0);
     //setWindowFlags(Qt::CustomizeWindowHint);
+    m_title = true;
 
     // Create a display for the camera image
     m_display = new ImageDisplay(widget);
@@ -45,6 +46,17 @@ MainWindow::MainWindow(QWidget* parent)
 
     // Set minimum window size
     this->setMinimumSize(700, 500);
+}
+
+void MainWindow::toggle_title_bar(bool state)
+{
+    if (!state) {
+        setWindowFlags(Qt::CustomizeWindowHint);
+    } else {
+        setWindowFlags(Qt::WindowTitleHint);
+    }
+    show();
+    m_title = state;
 }
 
 
@@ -71,6 +83,10 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     {
         destroy_all();
     }
+    else if (k == Qt::Key_T)
+    {
+        toggle_title_bar(!m_title);
+    }
     else
     {
         QMainWindow::keyPressEvent(event);
@@ -89,8 +105,8 @@ MainWindow::~MainWindow()
 {
     destroy_all();
     delete m_display;
+    delete m_worker;
 }
-
 
 void MainWindow::destroy_all()
 {
