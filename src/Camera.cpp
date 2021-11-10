@@ -134,8 +134,8 @@ void IDSCamera::deinitialize()
     {
         try
         {
-            m_stream->KillWait();
             m_stream->StopAcquisition(peak::core::AcquisitionStopMode::Default);
+            m_stream->KillWait();
             m_stream->Flush(peak::core::DataStreamFlushMode::DiscardAll);
 
             for (const auto& buffer : m_stream->AnnouncedBuffers())
@@ -167,8 +167,9 @@ void IDSCamera::open_data_stream()
     if (m_stream)
     {
          // Flush queue and prepare all buffers for revoking
-        m_stream->StopAcquisition(peak::core::AcquisitionStopMode::Default);
+        //m_stream->StopAcquisition(peak::core::AcquisitionStopMode::Default);
         m_stream->Flush(peak::core::DataStreamFlushMode::DiscardAll);
+        //m_stream->KillWait();
 
         // Clear all old buffers
         for (const auto& buffer : m_stream->AnnouncedBuffers())
