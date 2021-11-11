@@ -41,6 +41,10 @@ private:
 
     int m_imageWidth = 0;
     int m_imageHeight = 0;
+    int m_cropx = 0;
+    int m_cropy = 0;
+    int m_cropw = -1;
+    int m_croph = -1;
 
 };
 

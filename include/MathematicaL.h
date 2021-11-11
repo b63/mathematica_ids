@@ -25,6 +25,7 @@ typedef std::function<int(State, int)> yield_callback_t;
 typedef std::function<std::shared_ptr<Image>()> hook_get_t;
 typedef std::function<void(std::shared_ptr<Image>)> hook_send_t;
 typedef std::function<void(const std::string&, double)> hook_set_prop_t;
+typedef std::function<void(int, int, int, int)> hook_imgcrop_t;
 
 void rgb_to_rgb3(int *dst, const int *src, const size_t N, const size_t channels = 3);
 void rgb3_to_rgb(int *dst, const int *src, const size_t N, const size_t channels = 3);
@@ -53,6 +54,7 @@ class MathematicaL {
         void register_hook_send(const hook_send_t &fn);
         void register_hook_set_prop(const hook_set_prop_t &fn);
         void register_yield_callback(const yield_callback_t &fn);
+        void register_hook_imgcrop(const hook_imgcrop_t &fn);
         void set_verbosity(int level);
 
         State get_state() const;
@@ -63,6 +65,7 @@ class MathematicaL {
         int command_exposure();
         int command_get();
         int command_send();
+        int command_imgcrop();
         int register_WSyield_fn(const yield_fn_t &yfn);
         int fprintf_l(FILE *f, const char *fmt, ...);
 
@@ -73,6 +76,7 @@ class MathematicaL {
         hook_get_t hook_get;
         hook_send_t hook_send;
         hook_set_prop_t hook_set_prop;
+        hook_imgcrop_t hook_imgcrop;
         yield_callback_t yield_callback;
 
         State state; 

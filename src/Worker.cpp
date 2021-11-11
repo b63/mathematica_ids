@@ -2,6 +2,7 @@
 #include <cstring>
 #include <exception>
 #include <thread>
+#include <algorithm>
 
 #include <QDebug>
 #include <QObject>
@@ -48,6 +49,13 @@ Worker::Worker(QObject* parent)
 
             });
 
+    m_link.register_hook_imgcrop([this](int x, int y, int w, int h){
+            m_cropx = x;
+            m_cropy = y;
+            m_cropw = w;
+            m_croph = h;
+        });
+
 }
 
 
@@ -83,6 +91,32 @@ std::shared_ptr<Image> Worker::get_camera_image()
     {
         printf("Woker: getting camera image\n");
         ptr_image img {m_camera->get_image()};
+        if (img)
+        {
+
+            int x = std::clamp(m_cropx, 0, static_cast<int>(img->w));
+            int y = std::clamp(m_cropy, 0, static_cast<int>(img->h));
+
+            int w = (m_cropw < 0 ? static_cast<int>(img->w) : m_cropw);
+            int h = (m_croph < 0 ? static_cast<int>(img->w) : m_croph);
+            w = std::clamp(w, 0, static_cast<int>(img->w) - x);
+            h = std::clamp(h, 0, static_cast<int>(img->h) - y);
+
+            ptr_image c_img = std::make_shared<Image>(new int[w*h], w, h);
+
+            printf("Worker: cropped at %i, %i with %ix%i\n", x, y, w, h);
+            const int *ptr = img->data + x + y*img->w;
+            int *dst = c_img->data;
+            for (size_t j = y; j < h; j++)
+            {
+                memcpy(dst, ptr, w*sizeof(int));
+                ptr += img->w;
+                dst += w;
+            }
+
+            return c_img;
+        }
+
         return img;
     }
     catch (const char *e)

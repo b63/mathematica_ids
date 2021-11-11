@@ -75,6 +75,11 @@ void MathematicaL::register_hook_set_prop(const hook_set_prop_t &fn)
     hook_set_prop = fn;
 }
 
+void MathematicaL::register_hook_imgcrop(const hook_imgcrop_t &fn)
+{
+    hook_imgcrop = fn;
+}
+
 
 void MathematicaL::register_yield_callback(const yield_callback_t &fn)
 {
@@ -440,6 +445,14 @@ int MathematicaL::process_packet()
         }
         ret = command_send();
     }
+    else if (!std::strcmp(command, "imgcrop"))
+    {
+        if (n != 5) {
+            fprintf_l(stderr, "%s imgcrop command needs 4 argument\n", prefix);
+            return !WSNewPacket(mlp);
+        }
+        ret = command_imgcrop();
+    }
     else if (!std::strcmp(command, "get"))
     {
         if (n != 1) {
@@ -463,6 +476,27 @@ int MathematicaL::process_packet()
     WSReleaseString(mlp, command);
 
     return ret;
+}
+
+int MathematicaL::command_imgcrop() 
+{
+    int vals[4];
+
+    for (size_t i = 0; i < 4; ++i)
+    {
+        int ret = WSGetType(mlp);
+        if (ret != WSTKINT) {
+            fprintf_l(stderr, "WSTP: received unkown type '%s' for %lu argument, expected integer\n", str_WSType(ret), i);
+            return !WSNewPacket(mlp);
+        }
+
+        WSGetInteger(mlp, vals+i);
+    }
+
+    if (hook_imgcrop)
+        hook_imgcrop(vals[0], vals[1], vals[2], vals[3]);
+
+    return !WSNewPacket(mlp);
 }
 
 int MathematicaL::command_exposure() 
