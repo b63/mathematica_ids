@@ -622,7 +622,7 @@ int MathematicaL::command_send()
             bw_to_rgb(cdata, data, N);
         } else {
             // rgb image
-            rgb3_to_rgb(cdata, data, N, 3);
+            rgb3_to_rgb(cdata, data, N, dims[2]);
         }
 
         // cdata memory will be release by ~Image
