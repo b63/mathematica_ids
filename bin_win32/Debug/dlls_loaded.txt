@@ -1,0 +1,1086 @@
+$ ../Listdlls.exe 1692
+
+Listdlls v3.2 - Listdlls
+Copyright (C) 1997-2016 Mark Russinovich
+Sysinternals
+
+------------------------------------------------------------------------------
+ueye_link.exe pid: 1692
+Command line: "C:\Users\user0\Documents\guoy_phase\mathematica_ids\bin_win32\Debug\ueye_link.exe"
+
+Base                Size      Path
+0x0000000075290000  0x30d000  C:\Users\user0\Documents\guoy_phase\mathematica_ids\bin_win32\Debug\ueye_link.exe
+0x00000000190b0000  0x1f5000  C:\Windows\SYSTEM32\ntdll.dll
+0x00000000171a0000  0xbe000   C:\Windows\System32\KERNEL32.DLL
+0x0000000016e30000  0x2c8000  C:\Windows\System32\KERNELBASE.dll
+0x0000000001150000  0x370000  C:\Program Files\IDS\ids_peak\sdk\api\lib\x86_64\ids_peak.dll
+0x00000000a8790000  0xa31000  C:\Program Files\IDS\ids_peak\sdk\ipl\lib\x86_64\ids_peak_ipl.dll
+0x00000000169e0000  0x100000  C:\Windows\System32\ucrtbase.dll
+0x00000000a91d0000  0x1678000  C:\Users\user0\Documents\guoy_phase\mathematica_ids\bin_win32\Debug\Qt6Guid.dll
+0x00000000aa850000  0x1056000  C:\Users\user0\Documents\guoy_phase\mathematica_ids\bin_win32\Debug\Qt6Widgetsd.dll
+0x0000000018090000  0x2b000   C:\Windows\System32\GDI32.dll
+0x0000000016920000  0x22000   C:\Windows\System32\win32u.dll
+0x0000000016ae0000  0x10b000  C:\Windows\System32\gdi32full.dll
+0x0000000017530000  0x1a1000  C:\Windows\System32\USER32.dll
+0x00000000167d0000  0x9d000   C:\Windows\System32\msvcp_win.dll
+0x00000000b6fc0000  0x1d2000  C:\Program Files\Wolfram Research\Mathematica\12.3\SystemFiles\Links\WSTP\DeveloperKit\Windows-x86-64\SystemAdditions\WSTP64I4.dll
+0x00000000189e0000  0x12a000  C:\Windows\System32\ole32.dll
+0x0000000018e00000  0x12a000  C:\Windows\System32\RPCRT4.dll
+0x00000000180c0000  0xac000   C:\Windows\System32\ADVAPI32.dll
+0x0000000017100000  0x9e000   C:\Windows\System32\msvcrt.dll
+0x0000000017d30000  0x355000  C:\Windows\System32\combase.dll
+0x0000000018170000  0x73f000  C:\Windows\System32\SHELL32.dll
+0x00000000188b0000  0x9b000   C:\Windows\System32\sechost.dll
+0x0000000018f30000  0xda000   C:\Windows\System32\COMDLG32.dll
+0x0000000017410000  0xad000   C:\Windows\System32\shcore.dll
+0x00000000a7870000  0xf14000  C:\Users\user0\Documents\guoy_phase\mathematica_ids\bin_win32\Debug\Qt6Cored.dll
+0x00000000172e0000  0x55000   C:\Windows\System32\SHLWAPI.dll
+0x00000000174c0000  0x6b000   C:\Windows\System32\WS2_32.dll
+0x00000000037c0000  0x8b000   C:\Program Files\IDS\ids_peak\sdk\api\lib\x86_64\FirmwareUpdate_MD_VC140_v3_2_IDS.dll
+0x0000000017c60000  0xcd000   C:\Windows\System32\OLEAUT32.dll
+0x0000000003850000  0x22000   C:\Program Files\IDS\ids_peak\sdk\api\lib\x86_64\GCBase_MD_VC140_v3_2_IDS.dll
+0x000000000add0000  0x8e000   C:\Windows\SYSTEM32\MSVCP140.dll
+0x000000000ae60000  0x1b000   C:\Windows\SYSTEM32\VCRUNTIME140.dll
+0x0000000012630000  0x264000  C:\Windows\SYSTEM32\d3d11.dll
+0x0000000015080000  0xf4000   C:\Windows\SYSTEM32\dxgi.dll
+0x0000000001040000  0x10d000  C:\Program Files\IDS\ids_peak\sdk\api\lib\x86_64\GenApi_MD_VC140_v3_2_IDS.dll
+0x0000000013f20000  0x2f000   C:\Windows\SYSTEM32\dwmapi.dll
+0x0000000013d10000  0x9e000   C:\Windows\SYSTEM32\UxTheme.dll
+0x00000000b6ed0000  0xe2000   C:\Windows\SYSTEM32\MSVCP140D.dll
+0x00000000014c0000  0xa000    C:\Windows\SYSTEM32\MSVCP140_1D.dll
+0x00000000eed10000  0x2b000   C:\Windows\SYSTEM32\VCRUNTIME140D.dll
+0x00000000002c0000  0xf000    C:\Windows\SYSTEM32\VCRUNTIME140_1D.dll
+0x00000000b6b00000  0x21f000  C:\Windows\SYSTEM32\ucrtbased.dll
+0x00000000ddfa0000  0x60000   C:\Windows\SYSTEM32\MSVCP140_2D.dll
+0x00000000f5bc0000  0x1d000   C:\Windows\SYSTEM32\MPR.dll
+0x00000000021d0000  0x18000   C:\Windows\SYSTEM32\NETAPI32.dll
+0x00000000166d0000  0x2e000   C:\Windows\SYSTEM32\USERENV.dll
+0x000000000fd40000  0xa000    C:\Windows\SYSTEM32\VERSION.dll
+0x00000000f36c0000  0x27000   C:\Windows\SYSTEM32\WINMM.dll
+0x00000000023f0000  0xb0000   C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.19041.1110_none_792d1c772443f647\COMCTL32.dll
+0x000000000abc0000  0xc000    C:\Windows\SYSTEM32\VCRUNTIME140_1.dll
+0x0000000002130000  0xd000    C:\Program Files\IDS\ids_peak\sdk\api\lib\x86_64\Log_MD_VC140_v3_2_IDS.dll
+0x0000000000c20000  0x11000   C:\Program Files\IDS\ids_peak\sdk\api\lib\x86_64\MathParser_MD_VC140_v3_2_IDS.dll
+0x0000000000b40000  0xbd000   C:\Program Files\IDS\ids_peak\sdk\api\lib\x86_64\XmlParser_MD_VC140_v3_2_IDS.dll
+0x0000000000b10000  0x23000   C:\Program Files\IDS\ids_peak\sdk\api\lib\x86_64\NodeMapData_MD_VC140_v3_2_IDS.dll
+0x0000000016170000  0xc000    C:\Windows\SYSTEM32\CRYPTBASE.DLL
+0x0000000015d30000  0xc000    C:\Windows\SYSTEM32\NETUTILS.DLL
+0x0000000004fd0000  0x28000   C:\Windows\SYSTEM32\SRVCLI.DLL
+0x0000000017c30000  0x30000   C:\Windows\System32\IMM32.DLL
+0x0000000016950000  0x83000   C:\Windows\System32\bcryptPrimitives.dll
+0x00000000ad750000  0x358000  C:\Users\user0\Documents\guoy_phase\mathematica_ids\bin_win32\Debug\platforms\qwindowsd.dll
+0x0000000013a50000  0x14000   C:\Windows\SYSTEM32\WTSAPI32.dll
+0x0000000015010000  0x12000   C:\Windows\SYSTEM32\kernel.appcore.dll
+0x0000000014870000  0x790000  C:\Windows\SYSTEM32\windows.storage.dll
+0x0000000016220000  0x2e000   C:\Windows\SYSTEM32\Wldp.dll
+0x0000000016710000  0x1f000   C:\Windows\SYSTEM32\profapi.dll
+0x0000000015d90000  0x4b000   C:\Windows\SYSTEM32\powrprof.dll
+0x0000000015be0000  0x12000   C:\Windows\SYSTEM32\UMPDC.dll
+0x00000000bb0b0000  0x72000   C:\Users\user0\Documents\guoy_phase\mathematica_ids\bin_win32\Debug\styles\qwindowsvistastyled.dll
+0x00000000f3820000  0x1ce000  C:\Windows\system32\d3d9.dll
+0x00000000b6740000  0xf6000   C:\Program Files\IDS\ids_peak\ids_gevgentl\64\ids_gevgentl.cti
+0x0000000015c00000  0x3b000   C:\Windows\SYSTEM32\IPHLPAPI.DLL
+0x0000000016e00000  0x27000   C:\Windows\System32\bcrypt.dll
+0x00000000b4110000  0xff000   C:\Program Files\IDS\ids_peak\ids_gevgentl\64\ids_gevgentlk.cti
+0x00000000b6a50000  0xaa000   C:\Program Files\IDS\ids_peak\ids_u3vgentl\64\ids_u3vgentlk.cti
+0x00000000a3bf0000  0xfc000   C:\Program Files\IDS\ids_peak\ids_ueyegentl\64\ids_ueyegentl.cti
+0x0000000080000000  0xd3c000  C:\Windows\SYSTEM32\uEye_api_64.dll
+0x00000000021f0000  0x125000  C:\Windows\SYSTEM32\OPENGL32.dll
+0x0000000002180000  0x2c000   C:\Windows\SYSTEM32\GLU32.dll
+0x0000000000240000  0x31000   C:\Windows\SYSTEM32\VCOMP140.DLL
+0x0000000017350000  0x8000    C:\Windows\System32\NSI.dll
+0x000000000cfa0000  0x17000   C:\Windows\SYSTEM32\dhcpcsvc6.DLL
+0x0000000018b10000  0x115000  C:\Windows\System32\MSCTF.dll
+0x000000000e930000  0x1d000   C:\Windows\SYSTEM32\dhcpcsvc.DLL
+0x0000000015c40000  0xcb000   C:\Windows\SYSTEM32\DNSAPI.dll
+0x0000000017360000  0xa9000   C:\Windows\System32\clbcatq.dll
+0x00000000eca30000  0x3e000   C:\Windows\system32\dataexchange.dll
+0x0000000012e60000  0x1e5000  C:\Windows\system32\dcomp.dll
+0x0000000010100000  0x201000  C:\Windows\system32\twinapi.appcore.dll
+0x0000000015f80000  0x6a000   C:\Windows\system32\mswsock.dll
+0x00000000fb610000  0xf9000   C:\Windows\SYSTEM32\textinputframework.dll
+0x00000000133d0000  0x35e000  C:\Windows\System32\CoreUIComponents.dll
+0x0000000013730000  0xf2000   C:\Windows\System32\CoreMessaging.dll
+0x0000000015480000  0x33000   C:\Windows\SYSTEM32\ntmarta.dll
+0x0000000012070000  0x154000  C:\Windows\SYSTEM32\wintypes.dll
+0x00000000ed780000  0x66000   C:\Windows\system32\Oleacc.dll
+0x00000000e9c30000  0x2f5000  C:\Windows\system32\UIAutomationCore.dll
+0x0000000014700000  0xf6000   C:\Windows\SYSTEM32\PROPSYS.dll
+0x00000000165e0000  0xa2000   C:\Windows\SYSTEM32\sxs.dll
+0x00000000042d0000  0x9000    C:\Windows\SYSTEM32\WSOCK32.DLL
+0x0000000000030000  0x17000   C:\Windows\system32\napinsp.dll
+0x00000000002a0000  0x1b000   C:\Windows\system32\pnrpnsp.dll
+0x0000000011600000  0x15000   C:\Windows\system32\wshbth.dll
+0x000000000fa70000  0x1d000   C:\Windows\system32\NLAapi.dll
+0x0000000005540000  0x12000   C:\Windows\System32\winrnr.dll
+0x000000000b520000  0x7f000   C:\Windows\System32\fwpuclnt.dll
+0x00000000050a0000  0xa000    C:\Windows\System32\rasadhlp.dll
+
+user0@DESKTOP-65K9QP7 MSYS ~/Documents/guoy_phase/mathematica_ids (master)
+$ ../Listdlls.exe -v 1692
+
+Listdlls v3.2 - Listdlls
+Copyright (C) 1997-2016 Mark Russinovich
+Sysinternals
+
+------------------------------------------------------------------------------
+ueye_link.exe pid: 1692
+Command line: "C:\Users\user0\Documents\guoy_phase\mathematica_ids\bin_win32\Debug\ueye_link.exe"
+
+Base                Size      Path
+0x0000000075290000  0x30d000  C:\Users\user0\Documents\guoy_phase\mathematica_ids\bin_win32\Debug\ueye_link.exe
+        Verified:       Unsigned
+        Publisher:      n/a
+        Description:    n/a
+        Product:        n/a
+        Version:        n/a
+        File version:   n/a
+        Create time:    Sat Nov 13 12:25:30 2021
+
+0x00000000190b0000  0x1f5000  C:\Windows\SYSTEM32\ntdll.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    NT Layer DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1288
+        File version:   6.2.19041.1288
+        Create time:    Tue May 23 17:48:38 2056
+
+0x00000000171a0000  0xbe000   C:\Windows\System32\KERNEL32.DLL
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Windows NT BASE API Client DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1348
+        File version:   6.2.19041.1348
+        Create time:    Wed Feb 23 00:01:56 2000
+
+0x0000000016e30000  0x2c8000  C:\Windows\System32\KERNELBASE.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Windows NT BASE API Client DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1348
+        File version:   6.2.19041.1348
+        Create time:    Mon Apr 04 20:38:10 2033
+
+0x0000000001150000  0x370000  C:\Program Files\IDS\ids_peak\sdk\api\lib\x86_64\ids_peak.dll
+        Verified:       IDS Imaging Development Systems GmbH
+        Publisher:      IDS Imaging Development Systems GmbH
+        Description:    IDS peak API
+        Product:        IDS peak API
+        Version:        1.3.0.7
+        File version:   1.3.0.7
+        Create time:    Wed Aug 18 03:47:23 2021
+
+0x00000000a8790000  0xa31000  C:\Program Files\IDS\ids_peak\sdk\ipl\lib\x86_64\ids_peak_ipl.dll
+        Verified:       IDS Imaging Development Systems GmbH
+        Publisher:      IDS Imaging Development Systems GmbH
+        Description:    IDS Easy Image Processing Library
+        Product:        IDS peak IPL
+        Version:        1.3.1.7
+        File version:   1.3.1.7
+        Create time:    Wed Aug 18 03:30:23 2021
+
+0x00000000169e0000  0x100000  C:\Windows\System32\ucrtbase.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft« C Runtime Library
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.789
+        File version:   6.2.19041.789
+        Create time:    Thu Apr 22 19:39:11 1993
+
+0x00000000a91d0000  0x1678000  C:\Users\user0\Documents\guoy_phase\mathematica_ids\bin_win32\Debug\Qt6Guid.dll
+        Verified:       The Qt Company Oy
+        Publisher:      The Qt Company Ltd.
+        Description:    C++ Application Development Framework
+        Product:        Qt6
+        Version:        6.2.1.0
+        File version:   6.2.1.0
+        Create time:    Wed Oct 20 10:07:44 2021
+
+0x00000000aa850000  0x1056000  C:\Users\user0\Documents\guoy_phase\mathematica_ids\bin_win32\Debug\Qt6Widgetsd.dll
+        Verified:       The Qt Company Oy
+        Publisher:      The Qt Company Ltd.
+        Description:    C++ Application Development Framework
+        Product:        Qt6
+        Version:        6.2.1.0
+        File version:   6.2.1.0
+        Create time:    Wed Oct 20 10:11:54 2021
+
+0x0000000018090000  0x2b000   C:\Windows\System32\GDI32.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    GDI Client DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1202
+        File version:   6.2.19041.1202
+        Create time:    Sat Mar 27 07:16:23 2055
+
+0x0000000016920000  0x22000   C:\Windows\System32\win32u.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Win32u
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1320
+        File version:   6.2.19041.1320
+        Create time:    Tue May 03 14:26:59 1977
+
+0x0000000016ae0000  0x10b000  C:\Windows\System32\gdi32full.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    GDI Client DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1110
+        File version:   6.2.19041.1110
+        Create time:    Wed Oct 15 09:15:32 2064
+
+0x0000000017530000  0x1a1000  C:\Windows\System32\USER32.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Multi-User Windows USER API Client DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1202
+        File version:   6.2.19041.1202
+        Create time:    Sat Sep 11 16:58:36 1971
+
+0x00000000167d0000  0x9d000   C:\Windows\System32\msvcp_win.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft« C Runtime Library
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.789
+        File version:   6.2.19041.789
+        Create time:    Fri May 19 09:25:03 2000
+
+0x00000000b6fc0000  0x1d2000  C:\Program Files\Wolfram Research\Mathematica\12.3\SystemFiles\Links\WSTP\DeveloperKit\Windows-x86-64\SystemAdditions\WSTP64I4.dll
+        Verified:       Wolfram Research
+        Publisher:      Wolfram Research, Inc.
+        Description:    WSTPÖ Shared Library
+        Product:        WSTPÖ
+        Version:        4.44.0.0
+        File version:   4.44.3083.58639
+        Create time:    Sat Jun 12 02:01:35 2021
+
+0x00000000189e0000  0x12a000  C:\Windows\System32\ole32.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft OLE for Windows
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1202
+        File version:   6.2.19041.1202
+        Create time:    Fri Apr 11 19:16:33 2070
+
+0x0000000018e00000  0x12a000  C:\Windows\System32\RPCRT4.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Remote Procedure Call Runtime
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1288
+        File version:   6.2.19041.1288
+        Create time:    Tue Aug 25 15:39:41 2054
+
+0x00000000180c0000  0xac000   C:\Windows\System32\ADVAPI32.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Advanced Windows 32 Base API
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1052
+        File version:   6.2.19041.1052
+        Create time:    Sun Nov 18 06:39:05 1984
+
+0x0000000017100000  0x9e000   C:\Windows\System32\msvcrt.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Windows NT CRT DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   7.0.19041.546
+        Create time:    Fri Nov 20 17:31:21 2015
+
+0x0000000017d30000  0x355000  C:\Windows\System32\combase.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft COM for Windows
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1348
+        File version:   6.2.19041.1348
+        Create time:    Tue May 21 04:32:16 2069
+
+0x0000000018170000  0x73f000  C:\Windows\System32\SHELL32.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Windows Shell Common Dll
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1320
+        File version:   6.2.19041.1320
+        Create time:    Wed Dec 16 19:56:19 2082
+
+0x00000000188b0000  0x9b000   C:\Windows\System32\sechost.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Host for SCM/SDDL/LSA Lookup APIs
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.906
+        File version:   6.2.19041.906
+        Create time:    Mon Jan 07 20:07:38 2008
+
+0x0000000018f30000  0xda000   C:\Windows\System32\COMDLG32.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Common Dialogs DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.906
+        File version:   6.2.19041.906
+        Create time:    Mon Jul 16 09:30:49 1990
+
+0x0000000017410000  0xad000   C:\Windows\System32\shcore.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    SHCORE
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1320
+        File version:   6.2.19041.1320
+        Create time:    Mon Sep 08 11:50:53 2104
+
+0x00000000a7870000  0xf14000  C:\Users\user0\Documents\guoy_phase\mathematica_ids\bin_win32\Debug\Qt6Cored.dll
+        Verified:       The Qt Company Oy
+        Publisher:      The Qt Company Ltd.
+        Description:    C++ Application Development Framework
+        Product:        Qt6
+        Version:        6.2.1.0
+        File version:   6.2.1.0
+        Create time:    Wed Oct 20 10:03:07 2021
+
+0x00000000172e0000  0x55000   C:\Windows\System32\SHLWAPI.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Shell Light-weight Utility Library
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1023
+        File version:   6.2.19041.1023
+        Create time:    Tue Oct 07 01:37:27 2092
+
+0x00000000174c0000  0x6b000   C:\Windows\System32\WS2_32.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Windows Socket 2.0 32-Bit DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Tue Jul 17 20:18:03 2063
+
+0x00000000037c0000  0x8b000   C:\Program Files\IDS\ids_peak\sdk\api\lib\x86_64\FirmwareUpdate_MD_VC140_v3_2_IDS.dll
+        Verified:       Unsigned
+        Publisher:      n/a
+        Description:    n/a
+        Product:        n/a
+        Version:        3.2.0.0
+        File version:   3.2.0.0
+        Create time:    Wed Aug 18 03:32:51 2021
+
+0x0000000017c60000  0xcd000   C:\Windows\System32\OLEAUT32.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    OLEAUT32.DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.985
+        File version:   6.2.19041.985
+        Create time:    Thu Sep 30 22:07:23 2021
+
+0x0000000003850000  0x22000   C:\Program Files\IDS\ids_peak\sdk\api\lib\x86_64\GCBase_MD_VC140_v3_2_IDS.dll
+        Verified:       Unsigned
+        Publisher:      n/a
+        Description:    n/a
+        Product:        n/a
+        Version:        3.2.0.0
+        File version:   3.2.0.0
+        Create time:    Wed Aug 18 03:31:15 2021
+
+0x000000000add0000  0x8e000   C:\Windows\SYSTEM32\MSVCP140.dll
+        Verified:       Microsoft Corporation
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft« C Runtime Library
+        Product:        Microsoft« Visual Studio«
+        Version:        14.30.30704.0
+        File version:   14.30.30704.0
+        Create time:    Mon Oct 04 00:33:09 2021
+
+0x000000000ae60000  0x1b000   C:\Windows\SYSTEM32\VCRUNTIME140.dll
+        Verified:       Microsoft Corporation
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft« C Runtime Library
+        Product:        Microsoft« Visual Studio«
+        Version:        14.30.30704.0
+        File version:   14.30.30704.0
+        Create time:    Mon Oct 04 00:33:09 2021
+
+0x0000000012630000  0x264000  C:\Windows\SYSTEM32\d3d11.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Direct3D 11 Runtime
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1202
+        File version:   6.2.19041.1202
+        Create time:    Sat Feb 28 14:03:20 2043
+
+0x0000000015080000  0xf4000   C:\Windows\SYSTEM32\dxgi.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    DirectX Graphics Infrastructure
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1266
+        File version:   6.2.19041.1266
+        Create time:    Sun Dec 07 20:08:12 2064
+
+0x0000000001040000  0x10d000  C:\Program Files\IDS\ids_peak\sdk\api\lib\x86_64\GenApi_MD_VC140_v3_2_IDS.dll
+        Verified:       Unsigned
+        Publisher:      n/a
+        Description:    n/a
+        Product:        n/a
+        Version:        3.2.0.0
+        File version:   3.2.0.0
+        Create time:    Wed Aug 18 03:32:04 2021
+
+0x0000000013f20000  0x2f000   C:\Windows\SYSTEM32\dwmapi.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft Desktop Window Manager API
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.746
+        File version:   6.2.19041.746
+        Create time:    Sat May 30 06:58:57 2037
+
+0x0000000013d10000  0x9e000   C:\Windows\SYSTEM32\UxTheme.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft UxTheme Library
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1266
+        File version:   6.2.19041.1266
+        Create time:    Sat Jul 13 01:14:29 2080
+
+0x00000000b6ed0000  0xe2000   C:\Windows\SYSTEM32\MSVCP140D.dll
+        Verified:       Microsoft Corporation
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft« C Runtime Library
+        Product:        Microsoft« Visual Studio«
+        Version:        14.30.30704.0
+        File version:   14.30.30704.0
+        Create time:    Mon Oct 04 00:33:10 2021
+
+0x00000000014c0000  0xa000    C:\Windows\SYSTEM32\MSVCP140_1D.dll
+        Verified:       Microsoft Corporation
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft« C Runtime Library _1
+        Product:        Microsoft« Visual Studio«
+        Version:        14.30.30704.0
+        File version:   14.30.30704.0
+        Create time:    Mon Oct 04 00:34:35 2021
+
+0x00000000eed10000  0x2b000   C:\Windows\SYSTEM32\VCRUNTIME140D.dll
+        Verified:       Microsoft Corporation
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft« C Runtime Library
+        Product:        Microsoft« Visual Studio«
+        Version:        14.30.30704.0
+        File version:   14.30.30704.0
+        Create time:    Mon Oct 04 00:33:09 2021
+
+0x00000000002c0000  0xf000    C:\Windows\SYSTEM32\VCRUNTIME140_1D.dll
+        Verified:       Microsoft Corporation
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft« C Runtime Library
+        Product:        Microsoft« Visual Studio«
+        Version:        14.30.30704.0
+        File version:   14.30.30704.0
+        Create time:    Mon Oct 04 00:33:10 2021
+
+0x00000000b6b00000  0x21f000  C:\Windows\SYSTEM32\ucrtbased.dll
+        Verified:       Microsoft Corporation
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft« C Runtime Library
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.22000.194
+        File version:   10.0.22000.194
+        Create time:    Sun Aug 12 11:49:36 2057
+
+0x00000000ddfa0000  0x60000   C:\Windows\SYSTEM32\MSVCP140_2D.dll
+        Verified:       Microsoft Corporation
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft« C Runtime Library _2
+        Product:        Microsoft« Visual Studio«
+        Version:        14.30.30704.0
+        File version:   14.30.30704.0
+        Create time:    Mon Oct 04 00:33:11 2021
+
+0x00000000f5bc0000  0x1d000   C:\Windows\SYSTEM32\MPR.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Multiple Provider Router DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Fri May 24 22:40:03 2069
+
+0x00000000021d0000  0x18000   C:\Windows\SYSTEM32\NETAPI32.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Net Win32 API DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Tue Jul 08 12:15:47 1986
+
+0x00000000166d0000  0x2e000   C:\Windows\SYSTEM32\USERENV.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Userenv
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.572
+        File version:   6.2.19041.572
+        Create time:    Thu Mar 01 07:14:47 2103
+
+0x000000000fd40000  0xa000    C:\Windows\SYSTEM32\VERSION.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Version Checking and File Installation Libraries
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Tue Oct 21 09:56:02 1980
+
+0x00000000f36c0000  0x27000   C:\Windows\SYSTEM32\WINMM.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    MCI API DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Thu Mar 29 09:40:55 2068
+
+0x00000000023f0000  0xb0000   C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.19041.1110_none_792d1c772443f647\COMCTL32.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    User Experience Controls Library
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1110
+        File version:   5.82.19041.1110
+        Create time:    Fri Jan 03 11:27:34 2003
+
+0x000000000abc0000  0xc000    C:\Windows\SYSTEM32\VCRUNTIME140_1.dll
+        Verified:       Microsoft Corporation
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft« C Runtime Library
+        Product:        Microsoft« Visual Studio«
+        Version:        14.30.30704.0
+        File version:   14.30.30704.0
+        Create time:    Mon Oct 04 00:33:12 2021
+
+0x0000000002130000  0xd000    C:\Program Files\IDS\ids_peak\sdk\api\lib\x86_64\Log_MD_VC140_v3_2_IDS.dll
+        Verified:       Unsigned
+        Publisher:      n/a
+        Description:    n/a
+        Product:        n/a
+        Version:        3.2.0.0
+        File version:   3.2.0.0
+        Create time:    Wed Aug 18 03:31:24 2021
+
+0x0000000000c20000  0x11000   C:\Program Files\IDS\ids_peak\sdk\api\lib\x86_64\MathParser_MD_VC140_v3_2_IDS.dll
+        Verified:       Unsigned
+        Publisher:      n/a
+        Description:    n/a
+        Product:        n/a
+        Version:        3.2.0.0
+        File version:   3.2.0.0
+        Create time:    Wed Aug 18 03:31:26 2021
+
+0x0000000000b40000  0xbd000   C:\Program Files\IDS\ids_peak\sdk\api\lib\x86_64\XmlParser_MD_VC140_v3_2_IDS.dll
+        Verified:       Unsigned
+        Publisher:      n/a
+        Description:    n/a
+        Product:        n/a
+        Version:        3.2.0.0
+        File version:   3.2.0.0
+        Create time:    Wed Aug 18 03:31:41 2021
+
+0x0000000000b10000  0x23000   C:\Program Files\IDS\ids_peak\sdk\api\lib\x86_64\NodeMapData_MD_VC140_v3_2_IDS.dll
+        Verified:       Unsigned
+        Publisher:      n/a
+        Description:    n/a
+        Product:        n/a
+        Version:        3.2.0.0
+        File version:   3.2.0.0
+        Create time:    Wed Aug 18 03:31:29 2021
+
+0x0000000016170000  0xc000    C:\Windows\SYSTEM32\CRYPTBASE.DLL
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Base cryptographic API DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Tue Oct 01 10:54:43 1991
+
+0x0000000015d30000  0xc000    C:\Windows\SYSTEM32\NETUTILS.DLL
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Net Win32 API Helpers DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Thu Jun 26 12:06:19 2104
+
+0x0000000004fd0000  0x28000   C:\Windows\SYSTEM32\SRVCLI.DLL
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Server Service Client DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Sat Sep 10 01:57:58 2011
+
+0x0000000017c30000  0x30000   C:\Windows\System32\IMM32.DLL
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Multi-User Windows IMM32 API Client DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Sun Nov 12 08:21:08 2000
+
+0x0000000016950000  0x83000   C:\Windows\System32\bcryptPrimitives.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Windows Cryptographic Primitives Library
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1348
+        File version:   6.2.19041.1348
+        Create time:    Fri Dec 25 12:09:24 1981
+
+0x00000000ad750000  0x358000  C:\Users\user0\Documents\guoy_phase\mathematica_ids\bin_win32\Debug\platforms\qwindowsd.dll
+        Verified:       The Qt Company Oy
+        Publisher:      The Qt Company Ltd.
+        Description:    C++ Application Development Framework
+        Product:        Qt6
+        Version:        6.2.1.0
+        File version:   6.2.1.0
+        Create time:    Wed Oct 20 10:13:20 2021
+
+0x0000000013a50000  0x14000   C:\Windows\SYSTEM32\WTSAPI32.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Windows Remote Desktop Session Host Server SDK APIs
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Sat Jan 11 15:04:49 2020
+
+0x0000000015010000  0x12000   C:\Windows\SYSTEM32\kernel.appcore.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    AppModel API Host
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Wed Oct 30 01:42:21 2097
+
+0x0000000014870000  0x790000  C:\Windows\SYSTEM32\windows.storage.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft WinRT Storage API
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1320
+        File version:   6.2.19041.1320
+        Create time:    Thu Oct 09 15:23:14 1980
+
+0x0000000016220000  0x2e000   C:\Windows\SYSTEM32\Wldp.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Windows Lockdown Policy
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1320
+        File version:   6.2.19041.1320
+        Create time:    Thu Jan 11 08:30:27 1990
+
+0x0000000016710000  0x1f000   C:\Windows\SYSTEM32\profapi.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    User Profile Basic API
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.844
+        File version:   6.2.19041.844
+        Create time:    Wed Jun 14 09:18:12 2034
+
+0x0000000015d90000  0x4b000   C:\Windows\SYSTEM32\powrprof.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Power Profile Helper DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Mon Jan 03 09:54:41 2061
+
+0x0000000015be0000  0x12000   C:\Windows\SYSTEM32\UMPDC.dll
+        Verified:       Microsoft Windows
+        Publisher:      n/a
+        Description:    n/a
+        Product:        n/a
+        Version:        n/a
+        File version:   n/a
+        Create time:    Thu May 04 13:43:50 2017
+
+0x00000000bb0b0000  0x72000   C:\Users\user0\Documents\guoy_phase\mathematica_ids\bin_win32\Debug\styles\qwindowsvistastyled.dll
+        Verified:       The Qt Company Oy
+        Publisher:      The Qt Company Ltd.
+        Description:    C++ Application Development Framework
+        Product:        Qt6
+        Version:        6.2.1.0
+        File version:   6.2.1.0
+        Create time:    Wed Oct 20 10:14:37 2021
+
+0x00000000f3820000  0x1ce000  C:\Windows\system32\d3d9.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Direct3D 9 Runtime
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.928
+        File version:   6.2.19041.928
+        Create time:    Sun Jul 25 09:03:00 1976
+
+0x00000000b6740000  0xf6000   C:\Program Files\IDS\ids_peak\ids_gevgentl\64\ids_gevgentl.cti
+        Verified:       IDS Imaging Development Systems GmbH
+        Publisher:      IDS Imaging Development Systems GmbH
+        Description:    IDS GenICam Producer Library for GigE Vision (Socket)
+        Product:        IDS GenICam Producer (GEV)
+        Version:        1.6.4.6
+        File version:   1.6.4.6
+        Create time:    Wed Aug 18 03:24:37 2021
+
+0x0000000015c00000  0x3b000   C:\Windows\SYSTEM32\IPHLPAPI.DLL
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    IP Helper API
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Wed May 15 00:41:30 2080
+
+0x0000000016e00000  0x27000   C:\Windows\System32\bcrypt.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Windows Cryptographic Primitives Library
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1023
+        File version:   6.2.19041.1023
+        Create time:    Tue May 26 03:18:52 2020
+
+0x00000000b4110000  0xff000   C:\Program Files\IDS\ids_peak\ids_gevgentl\64\ids_gevgentlk.cti
+        Verified:       IDS Imaging Development Systems GmbH
+        Publisher:      IDS Imaging Development Systems GmbH
+        Description:    IDS GenICam Producer Library for GigE Vision (Kernel)
+        Product:        IDS GenICam Producer (GEVK)
+        Version:        1.6.4.6
+        File version:   1.6.4.6
+        Create time:    Wed Aug 18 03:24:49 2021
+
+0x00000000b6a50000  0xaa000   C:\Program Files\IDS\ids_peak\ids_u3vgentl\64\ids_u3vgentlk.cti
+        Verified:       IDS Imaging Development Systems GmbH
+        Publisher:      IDS Imaging Development Systems GmbH
+        Description:    IDS GenICam Producer Library for USB3 Vision (Kernel)
+        Product:        IDS GenICam Producer (U3VK)
+        Version:        1.6.4.6
+        File version:   1.6.4.6
+        Create time:    Wed Aug 18 03:25:13 2021
+
+0x00000000a3bf0000  0xfc000   C:\Program Files\IDS\ids_peak\ids_ueyegentl\64\ids_ueyegentl.cti
+        Verified:       IDS Imaging Development Systems GmbH
+        Publisher:      IDS Imaging Development Systems GmbH
+        Description:    IDS GenICam Producer Library for IDS uEye
+        Product:        IDS GenICam Producer (uEye)
+        Version:        1.6.4.6
+        File version:   1.6.4.6
+        Create time:    Wed Aug 18 03:25:23 2021
+
+0x0000000080000000  0xd3c000  C:\Windows\SYSTEM32\uEye_api_64.dll
+        Verified:       IDS Imaging Development Systems GmbH
+        Publisher:      IDS Imaging Development Systems GmbH
+        Description:    IDS uEye - API
+        Product:        uEye_api Dynamic Link Library (DLL)
+        Version:        4.95.0.0
+        File version:   4.95.2967.0
+        Create time:    Wed Aug 25 23:24:26 2021
+
+0x00000000021f0000  0x125000  C:\Windows\SYSTEM32\OPENGL32.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    OpenGL Client DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1081
+        File version:   6.2.19041.1081
+        Create time:    Mon Apr 04 09:10:00 2072
+
+0x0000000002180000  0x2c000   C:\Windows\SYSTEM32\GLU32.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    OpenGL Utility Library DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1081
+        File version:   6.2.19041.1081
+        Create time:    Mon Apr 22 19:13:12 2041
+
+0x0000000000240000  0x31000   C:\Windows\SYSTEM32\VCOMP140.DLL
+        Verified:       Microsoft Corporation
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft« C/C++ OpenMP Runtime
+        Product:        Microsoft« Visual Studio«
+        Version:        14.30.30704.0
+        File version:   14.30.30704.0
+        Create time:    Mon Oct 04 00:41:34 2021
+
+0x0000000017350000  0x8000    C:\Windows\System32\NSI.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    NSI User-mode interface DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.610
+        File version:   6.2.19041.610
+        Create time:    Tue Sep 14 05:48:33 2060
+
+0x000000000cfa0000  0x17000   C:\Windows\SYSTEM32\dhcpcsvc6.DLL
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    DHCPv6 Client
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Sun Jan 24 02:52:20 2077
+
+0x0000000018b10000  0x115000  C:\Windows\System32\MSCTF.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    MSCTF Server DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1202
+        File version:   6.2.19041.1202
+        Create time:    Sun Feb 15 11:37:37 2004
+
+0x000000000e930000  0x1d000   C:\Windows\SYSTEM32\dhcpcsvc.DLL
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    DHCP Client Service
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Wed Dec 12 03:19:41 1984
+
+0x0000000015c40000  0xcb000   C:\Windows\SYSTEM32\DNSAPI.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    DNS Client API DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1320
+        File version:   6.2.19041.1320
+        Create time:    Fri Sep 13 13:38:12 2097
+
+0x0000000017360000  0xa9000   C:\Windows\System32\clbcatq.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    COM+ Configuration Catalog
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   2001.12.10941.16384
+        Create time:    Sat Oct 05 07:37:30 2086
+
+0x00000000eca30000  0x3e000   C:\Windows\system32\dataexchange.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Data exchange
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1151
+        File version:   6.2.19041.1151
+        Create time:    Sun Mar 26 22:36:20 2056
+
+0x0000000012e60000  0x1e5000  C:\Windows\system32\dcomp.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft DirectComposition Library
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1266
+        File version:   6.2.19041.1266
+        Create time:    Mon May 12 06:13:47 2014
+
+0x0000000010100000  0x201000  C:\Windows\system32\twinapi.appcore.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    twinapi.appcore
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.964
+        File version:   6.2.19041.964
+        Create time:    Wed Feb 27 19:10:25 2002
+
+0x0000000015f80000  0x6a000   C:\Windows\system32\mswsock.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft Windows Sockets 2.0 Service Provider
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Sat Oct 24 17:30:57 2099
+
+0x00000000fb610000  0xf9000   C:\Windows\SYSTEM32\textinputframework.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    "TextInputFramework.DYNLINK"
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1320
+        File version:   6.2.19041.1320
+        Create time:    Sun Jan 12 14:43:29 2053
+
+0x00000000133d0000  0x35e000  C:\Windows\System32\CoreUIComponents.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft Core UI Components Dll
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Fri Aug 18 14:30:27 2079
+
+0x0000000013730000  0xf2000   C:\Windows\System32\CoreMessaging.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft CoreMessaging Dll
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.746
+        File version:   6.2.19041.746
+        Create time:    Sat Aug 22 14:13:26 2082
+
+0x0000000015480000  0x33000   C:\Windows\SYSTEM32\ntmarta.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Windows NT MARTA provider
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Mon Aug 19 02:32:04 2002
+
+0x0000000012070000  0x154000  C:\Windows\SYSTEM32\wintypes.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Windows Base Types DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1348
+        File version:   6.2.19041.1348
+        Create time:    Wed Aug 03 06:00:49 2095
+
+0x00000000ed780000  0x66000   C:\Windows\system32\Oleacc.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Active Accessibility Core Component
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.746
+        File version:   7.2.19041.746
+        Create time:    Wed Jul 26 09:13:13 1989
+
+0x00000000e9c30000  0x2f5000  C:\Windows\system32\UIAutomationCore.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft UI Automation Core
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1266
+        File version:   7.2.19041.1266
+        Create time:    Wed Sep 28 18:44:36 2039
+
+0x0000000014700000  0xf6000   C:\Windows\SYSTEM32\PROPSYS.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Microsoft Property System
+        Product:        Windows« Search
+        Version:        7.0.19041.1023
+        File version:   7.0.19041.1023
+        Create time:    Tue Aug 18 21:21:50 2020
+
+0x00000000165e0000  0xa2000   C:\Windows\SYSTEM32\sxs.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Fusion 2.5
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Fri Apr 04 02:45:59 2008
+
+0x00000000042d0000  0x9000    C:\Windows\SYSTEM32\WSOCK32.DLL
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Windows Socket 32-Bit DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1
+        File version:   6.2.19041.1
+        Create time:    Wed Mar 16 19:24:10 2016
+
+0x0000000000030000  0x17000   C:\Windows\system32\napinsp.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    E-mail Naming Shim Provider
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Wed Nov 17 15:38:23 2038
+
+0x00000000002a0000  0x1b000   C:\Windows\system32\pnrpnsp.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    PNRP Name Space Provider
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Sat Dec 13 12:37:46 2081
+
+0x0000000011600000  0x15000   C:\Windows\system32\wshbth.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Windows Sockets Helper DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Sun Jan 06 03:25:00 2097
+
+0x000000000fa70000  0x1d000   C:\Windows\system32\NLAapi.dll
+
+
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Network Location Awareness 2
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1151
+        File version:   6.2.19041.1151
+        Create time:    Wed Jan 22 21:21:58 1986
+
+0x0000000005540000  0x12000   C:\Windows\System32\winrnr.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    LDAP RnR Provider DLL
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Mon Jun 03 17:01:45 2019
+
+0x000000000b520000  0x7f000   C:\Windows\System32\fwpuclnt.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    FWP/IPsec User-Mode API
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.1348
+        File version:   6.2.19041.1348
+        Create time:    Tue Aug 12 13:43:06 2014
+
+0x00000000050a0000  0xa000    C:\Windows\System32\rasadhlp.dll
+        Verified:       Microsoft Windows
+        Publisher:      Microsoft Corporation
+        Description:    Remote Access AutoDial Helper
+        Product:        Microsoft« Windows« Operating System
+        Version:        10.0.19041.546
+        File version:   6.2.19041.546
+        Create time:    Mon May 18 21:40:08 2009
+
