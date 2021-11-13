@@ -60,8 +60,8 @@ if (WIN32)
     # this didnt work for some reason
     # set_property(TARGET ueye_link PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreadedDebug")
     # so manually set it to statically link
-    target_compile_options(ueye_link BEFORE PRIVATE "/MT")
-    target_compile_options(test_wstp BEFORE PRIVATE "/MT")
+    target_compile_options(ueye_link BEFORE PRIVATE "/MT$<$<CONFIG:DEBUG>:d>")
+    target_compile_options(test_wstp BEFORE PRIVATE "/MT$<$<CONFIG:DEBUG>:d>")
 
     target_link_libraries (ueye_link
             ids_peak ids_peak_ipl
