@@ -57,6 +57,11 @@ add_executable (ueye_link
 
 if (WIN32)
     link_directories("${CMAKE_SOURCE_DIR}/lib")
+    # this didnt work for some reason
+    # set_property(TARGET ueye_link PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreadedDebug")
+    # so manually set it to statically link
+    target_compile_options(ueye_link BEFORE PRIVATE "/MT")
+    target_compile_options(test_wstp BEFORE PRIVATE "/MT")
 
     target_link_libraries (ueye_link
             ids_peak ids_peak_ipl
