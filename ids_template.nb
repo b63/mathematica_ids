@@ -1,0 +1,447 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17888,        439]
+NotebookOptionsPosition[     16835,        413]
+NotebookOutlinePosition[     17170,        428]
+CellTagsIndexPosition[     17127,        425]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["IDS Functions", "Section",
+ CellChangeTimes->{{3.844810332434315*^9, 
+  3.844810359034068*^9}},ExpressionUUID->"4498e5ef-0615-419a-a4b1-\
+d782d057b57e"],
+
+Cell[CellGroupData[{
+
+Cell["Functions for Link Management", "Subsection",
+ CellChangeTimes->{{3.844810654989958*^9, 
+  3.8448106660599623`*^9}},ExpressionUUID->"c4dfaf84-2c43-4350-a874-\
+89f86c93ea28"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Attempt", " ", "to", " ", "connect", " ", "to", " ", "WSTP", " ", 
+    "listening", " ", "under", " ", 
+    RowBox[{"name", " ", "'"}], 
+    RowBox[{
+     StyleBox[
+      RowBox[{"ueye", 
+       StyleBox["n",
+        FontWeight->"Bold",
+        FontSlant->"Italic"]}]], "'"}], " ", "\[IndentingNewLine]", 
+    RowBox[{"Example", ":", " ", 
+     RowBox[{"link", " ", 
+      RowBox[{"named", " ", "'"}], 
+      RowBox[{"ueye1", "'"}], " ", "should", " ", "be", " ", "waiting", " ", 
+      "for", " ", "connection", " ", "if", " ", "n", " ", "is", " ", "1.", 
+      "\[IndentingNewLine]", "Function", " ", "Aborts", " ", "if", " ", 
+      "activation", " ", "does", " ", "not", " ", "occur", " ", "within", " ",
+       "5", " ", 
+      RowBox[{"seconds", "."}]}]}]}], " ", "\[IndentingNewLine]", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"EstablishLink", "[", "n_", "]"}], ":=", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"link", " ", "=", " ", 
+         RowBox[{"LinkConnect", "[", 
+          RowBox[{"\"\<ueye\>\"", "<>", 
+           RowBox[{"ToString", "[", "n", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"TimeConstrained", "[", 
+         RowBox[{
+          RowBox[{"LinkActivate", "[", "link", "]"}], ",", "5"}], "]"}], 
+        ";"}]}], "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]",
+    "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Closes", " ", "all", " ", "links", " ", "with", " ", "names", " ", 
+     "that", " ", "start", " ", "with", " ", "ueye", "*", 
+     RowBox[{".", "\[IndentingNewLine]", 
+      RowBox[{"Note", ":", " ", 
+       RowBox[{
+       "ALWAYS", " ", "CLOSE", " ", "LINK", " ", "AFTER", " ", "ONE", " ", 
+        "SIDE", " ", "CLOSES", " ", "THE", " ", 
+        RowBox[{
+         RowBox[{"LINK", "/", "AND"}], "/", "OR"}], " ", "CRASHES"}]}]}]}], 
+    " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"CloseLink", "[", "]"}], ":=", " ", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"LinkClose", "[", "#", "]"}], "&"}], "/@", 
+         RowBox[{"Links", "[", "\"\<ueye*\>\"", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Links", "[", "\"\<ueye*\>\"", "]"}], ";"}]}], 
+      "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+     "Set", " ", "some", " ", "parameter", " ", "in", " ", "the", " ", 
+      "Camera"}], ",", " ", 
+     RowBox[{
+     "only", " ", "exposure", " ", "and", " ", "gain", " ", "supported", " ", 
+      "atm"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"SetCameraProperty", "::", "notsupp"}], " ", "=", " ", 
+     "\"\<Property `1` not supported\>\""}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"SetCameraProperty", "[", 
+      RowBox[{"name_", ",", " ", "value_"}], "]"}], ":=", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"!", 
+           RowBox[{"MemberQ", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"\"\<exposure\>\"", ",", " ", "\"\<gain\>\""}], "}"}], 
+             ",", " ", "name"}], "]"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Message", "[", 
+           RowBox[{
+            RowBox[{"SetProperty", "::", "notsupp"}], ",", " ", "name"}], 
+           "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Check", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"LinkWrite", "[", 
+             RowBox[{"link", ",", " ", 
+              RowBox[{"ReturnExpressionPacket", "[", 
+               RowBox[{"{", 
+                RowBox[{"name", ",", " ", "value"}], "}"}], "]"}]}], "]"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"Abort", "[", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+         "]"}], " ", ";"}]}], "\[IndentingNewLine]", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+     "Crop", " ", "the", " ", "image", " ", "before", " ", "sending", " ", 
+      "to", " ", "Mathematica"}], " ", "-", " ", 
+     RowBox[{
+     "Mathematica", " ", "lags", " ", "real", " ", "hard", " ", "if", " ", 
+      "image", " ", "is", " ", "big"}]}], "  ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"SetImageDimensions", "::", "notsupp"}], " ", "=", " ", 
+     "\"\<Property `1` not supported\>\""}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"SetImageDimensions", "[", 
+      RowBox[{"width_", ",", " ", "height_", ",", 
+       RowBox[{"OptionsPattern", "[", 
+        RowBox[{"{", 
+         RowBox[{"TopLeft", "\[Rule]", " ", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0"}], "}"}]}], "}"}], "]"}]}], "]"}], ":=", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y", ",", "w", ",", "h"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"x", " ", "=", 
+         RowBox[{"IntegerPart", "[", 
+          RowBox[{
+           RowBox[{"OptionValue", "[", "TopLeft", "]"}], "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"y", " ", "=", 
+         RowBox[{"IntegerPart", "[", 
+          RowBox[{
+           RowBox[{"OptionValue", "[", "TopLeft", "]"}], "[", 
+           RowBox[{"[", "2", "]"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"w", " ", "=", " ", 
+         RowBox[{"IntegerPart", "[", "width", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"h", " ", "=", " ", 
+         RowBox[{"IntegerPart", "[", "height", "]"}]}], ";", 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"Check", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"LinkWrite", "[", 
+           RowBox[{"link", ",", " ", 
+            RowBox[{"ReturnExpressionPacket", "[", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<imgcrop\>\"", ",", " ", "x", ",", " ", "y", ",", " ", "w", 
+               ",", " ", "h"}], "}"}], "]"}]}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Abort", "[", "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
+      "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+     "Send", " ", "an", " ", "Image", " ", "to", " ", "be", " ", "displayed", 
+      " ", "on", " ", "the", " ", "screen"}], ",", " ", 
+     RowBox[{
+     "aborts", " ", "if", " ", "something", " ", "goes", " ", "wrong"}]}], 
+    " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"SendImage", "::", "dim"}], " ", "=", " ", 
+     "\"\<must be of pixel 2d array with 1 or 3 channels\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"SendImage", "[", "image_", "]"}], ":=", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"bytes", ",", "n", ",", "dim"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"ImageQ", "[", "image", "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"bytes", " ", "=", " ", 
+           RowBox[{"ImageData", "[", 
+            RowBox[{"image", ",", " ", "\"\<Byte\>\""}], "]"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"bytes", " ", "=", " ", "image"}], ";"}]}], 
+         "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+        "\[IndentingNewLine]", 
+        RowBox[{"dim", " ", "=", " ", 
+         RowBox[{"Dimensions", "@", "bytes"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"n", " ", "=", " ", 
+         RowBox[{"Length", "@", "dim"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"n", "\[Equal]", "2"}], ",", "\[IndentingNewLine]", " ", 
+            RowBox[{"bytes", "=", " ", 
+             RowBox[{"ArrayReshape", "[", 
+              RowBox[{"bytes", ",", " ", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"dim", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], ",", 
+                 RowBox[{"dim", "[", 
+                  RowBox[{"[", "2", "]"}], "]"}], ",", "1"}], "}"}]}], 
+              "]"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"bytes", "=", 
+             RowBox[{"bytes", "[", 
+              RowBox[{"[", 
+               RowBox[{";;", ",", ";;", ",", 
+                RowBox[{"1", ";;", "3"}]}], "]"}], "]"}]}]}], 
+           "\[IndentingNewLine]", "]"}], ";"}], "*)"}], "\[IndentingNewLine]",
+         "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"n", " ", "\[Equal]", " ", "2"}], " ", "||", " ", 
+           RowBox[{"n", " ", "\[Equal]", " ", "3"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Check", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"LinkWrite", "[", 
+             RowBox[{"link", ",", " ", 
+              RowBox[{"ReturnExpressionPacket", "[", 
+               RowBox[{"{", 
+                RowBox[{"\"\<send\>\"", ",", " ", "bytes"}], "}"}], "]"}]}], 
+             "]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"Abort", "[", "]"}]}], "\[IndentingNewLine]", "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Message", "[", 
+           RowBox[{"SendImage", "::", "dim"}], "]"}]}], "\[IndentingNewLine]",
+          "]"}], ";"}]}], "\[IndentingNewLine]", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+     "Attempts", " ", "to", " ", "get", " ", "the", " ", "image", " ", "from",
+       " ", "the", " ", "Camera"}], ",", " ", 
+     RowBox[{
+     "aborts", " ", "if", " ", "an", " ", "error", " ", "occurs", " ", 
+      "while", " ", "reading", " ", "from", " ", 
+      RowBox[{"link", ".", "\[IndentingNewLine]", "If"}], " ", "no", " ", 
+      "data", " ", "is", " ", "avaiable", " ", "withint", " ", "TimeOut"}], 
+     ",", " ", 
+     RowBox[{"returns", " ", 
+      RowBox[{"None", "."}]}]}], "\[IndentingNewLine]", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"GetImage", "[", 
+      RowBox[{"OptionsPattern", "[", 
+       RowBox[{"{", 
+        RowBox[{"TimeOut", "\[Rule]", " ", "5"}], "}"}], "]"}], "]"}], ":=", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"rt", "=", "None"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Check", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"LinkWrite", "[", 
+           RowBox[{"link", ",", 
+            RowBox[{"ReturnExpressionPacket", "[", 
+             RowBox[{"{", "\"\<get\>\"", "}"}], "]"}]}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Abort", "[", "]"}]}], "\[IndentingNewLine]", "]"}], ";", 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"LinkReadyQ", "[", 
+           RowBox[{"link", ",", 
+            RowBox[{"OptionValue", "[", "TimeOut", "]"}]}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"rt", "=", 
+            RowBox[{"Check", "[", 
+             RowBox[{
+              RowBox[{"LinkRead", "[", "link", "]"}], ",", 
+              RowBox[{"Abort", "[", "]"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"bytes", "=", "rt"}], ";", "\[IndentingNewLine]", 
+           RowBox[{"PrintTemporary", "[", 
+            RowBox[{"\"\<converting \>\"", "<>", 
+             RowBox[{"ToString", "[", 
+              RowBox[{"Dimensions", "@", "rt"}], "]"}], "<>", 
+             "\"\< image ...\>\""}], "]"}], ";", "\[IndentingNewLine]", 
+           RowBox[{"Image", "[", 
+            RowBox[{"rt", ",", " ", "\"\<Byte\>\""}], "]"}]}], ",", 
+          "\[IndentingNewLine]", "None"}], "\[IndentingNewLine]", "]"}]}]}], 
+      "\[IndentingNewLine]", "]"}]}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.8447408747136593`*^9, 3.8447409776734333`*^9}, {
+   3.844741067200389*^9, 3.844741240029139*^9}, {3.8447414278345137`*^9, 
+   3.844741522388459*^9}, {3.8447415653796387`*^9, 3.844741768214747*^9}, {
+   3.8447418279761744`*^9, 3.84474187721706*^9}, {3.844761828322052*^9, 
+   3.844761859485458*^9}, {3.844810275150283*^9, 3.84481027966434*^9}, {
+   3.8448127680821495`*^9, 3.8448127690321445`*^9}, {3.8448127997621365`*^9, 
+   3.8448128297021475`*^9}, {3.844812870042143*^9, 3.84481287622215*^9}, {
+   3.844813121137395*^9, 3.844813125637393*^9}, {3.844816482845657*^9, 
+   3.844816522655655*^9}, {3.844817651066927*^9, 3.8448176549969397`*^9}, {
+   3.8448191354462986`*^9, 3.8448193951962996`*^9}, 3.8448567357746363`*^9, {
+   3.844856769564743*^9, 3.8448567785556498`*^9}, {3.844856869163273*^9, 
+   3.844857102551201*^9}, {3.8449072414793425`*^9, 3.8449072453230767`*^9}, {
+   3.844907302710535*^9, 3.8449074128042946`*^9}, {3.8455831370100517`*^9, 
+   3.8455833708448067`*^9}, {3.845584662385571*^9, 3.8455846934034157`*^9}, {
+   3.845669901144256*^9, 3.845669901521392*^9}, {3.8456699499023314`*^9, 
+   3.8456699545965023`*^9}},
+ CellLabel->
+  "In[219]:=",ExpressionUUID->"b754dcd4-23db-4d47-9ec4-43e5e5b071df"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Program", "Section",
+ CellChangeTimes->{{3.844812067143608*^9, 
+  3.8448120691335983`*^9}},ExpressionUUID->"14fe7b53-3818-4c4b-a89c-\
+7e6a9f07834d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EstablishLink", "[", "0", "]"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"start", " ", "link"}], ",", " ", 
+    RowBox[{"make", " ", "sure", " ", "ueye_link", " ", 
+     RowBox[{"is", " ", "'"}], "waiting", " ", "for", " ", 
+     RowBox[{"connection", "'"}]}]}], " ", "*)"}]}]], "Input",
+ CellChangeTimes->{{3.8448120743536024`*^9, 3.8448120788936095`*^9}, {
+   3.844812747042141*^9, 3.8448127479521427`*^9}, {3.844813029742141*^9, 
+   3.844813030422144*^9}, {3.8448163574657917`*^9, 3.844816358055791*^9}, {
+   3.8448194345662947`*^9, 3.844819458166295*^9}, {3.8448571425476294`*^9, 
+   3.8448571426432943`*^9}, {3.845583108261401*^9, 3.845583108450591*^9}, {
+   3.845584551266966*^9, 3.845584552577474*^9}, 3.8456700732748957`*^9, {
+   3.845670156211924*^9, 3.845670156390291*^9}},
+ CellLabel->
+  "In[237]:=",ExpressionUUID->"1e6df731-359c-4c01-aa6a-e0a4d67cdb5e"],
+
+Cell[BoxData[
+ RowBox[{"<<", "\"\<../laguerre/LG.wl\>\""}]], "Input",
+ CellChangeTimes->{{3.845669509841515*^9, 3.8456695261433907`*^9}, {
+  3.845670049359408*^9, 3.8456700530160418`*^9}, {3.845818149671233*^9, 
+  3.8458182101458073`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"c37999df-1cfb-48c6-8e66-bb91749427c0"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.844857300608103*^9, 3.844857300621572*^9}},
+ CellLabel->
+  "In[214]:=",ExpressionUUID->"f0a93ce0-bc7a-44fd-9067-ed192c5e5378"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CloseLink", "[", "]"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"close", " ", "link", " ", "and", " ", "re"}], "-", 
+    RowBox[{
+    "run", " ", "EstablishLink", " ", "if", " ", "something", " ", "goes", 
+     " ", "wrong"}]}], " ", "*)"}]}]], "Input",
+ CellChangeTimes->{{3.8448126745521493`*^9, 3.844812683212143*^9}, {
+  3.8448194624663143`*^9, 3.8448194797363005`*^9}},
+ CellLabel->
+  "In[236]:=",ExpressionUUID->"7740d38b-c4b2-4119-9977-de7e5804281b"]
+}, Open  ]]
+},
+WindowSize->{1920, 1056},
+WindowMargins->{{0, Automatic}, {-4, Automatic}},
+FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 158, 3, 68, "Section",ExpressionUUID->"4498e5ef-0615-419a-a4b1-d782d057b57e"],
+Cell[CellGroupData[{
+Cell[763, 29, 179, 3, 55, "Subsection",ExpressionUUID->"c4dfaf84-2c43-4350-a874-89f86c93ea28"],
+Cell[945, 34, 13750, 322, 1895, "Input",ExpressionUUID->"b754dcd4-23db-4d47-9ec4-43e5e5b071df"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14744, 362, 154, 3, 68, "Section",ExpressionUUID->"14fe7b53-3818-4c4b-a89c-7e6a9f07834d"],
+Cell[14901, 367, 913, 17, 31, "Input",ExpressionUUID->"1e6df731-359c-4c01-aa6a-e0a4d67cdb5e"],
+Cell[15817, 386, 317, 5, 31, "Input",ExpressionUUID->"c37999df-1cfb-48c6-8e66-bb91749427c0"],
+Cell[16137, 393, 175, 3, 31, "Input",ExpressionUUID->"f0a93ce0-bc7a-44fd-9067-ed192c5e5378"],
+Cell[16315, 398, 504, 12, 31, "Input",ExpressionUUID->"7740d38b-c4b2-4119-9977-de7e5804281b"]
+}, Open  ]]
+}
+]
+*)
+
