@@ -67,10 +67,10 @@ if (WIN32)
             ids_peak ids_peak_ipl
             Qt6::Widgets Qt6::Core Qt6::Gui
             ${CMAKE_THREAD_LIBS_INIT}
-            "${CMAKE_SOURCE_DIR}/lib/wstp64i4.lib"
+            "${CMAKE_SOURCE_DIR}/lib_win32/wstp64i4.lib"
         )
     target_link_libraries (test_wstp
-            "${CMAKE_SOURCE_DIR}/lib/wstp64i4.lib"
+            "${CMAKE_SOURCE_DIR}/lib_win32/wstp64i4.lib"
         )
 
 else()
