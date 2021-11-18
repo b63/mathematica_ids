@@ -13,7 +13,7 @@ class Worker : public QObject
     Q_OBJECT
 
 public:
-    Worker(QObject* parent = nullptr);
+    Worker(QObject* parent = nullptr, bool test = false);
     void initialize(bool full = false);
     void deinitialize();
 
@@ -31,6 +31,7 @@ private:
     bool m_stop       = false;
     bool m_poll_wstp  = true;
     bool m_running    = false;
+    bool m_test       = false;
     int m_reset       = 0;
     Camera *m_camera;
     MathematicaL m_link;

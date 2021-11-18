@@ -11,9 +11,10 @@
 #include "Camera.h"
 #include "MathematicaL.h"
 
-Worker::Worker(QObject* parent)
+Worker::Worker(QObject* parent, bool test)
     : QObject(parent),
-      m_link (MathematicaL("ueye"))
+      m_link (MathematicaL("ueye")),
+      m_test (test)
 {
     m_stop      = false;
     m_poll_wstp = true;
@@ -144,7 +145,10 @@ void Worker::initialize(bool full)
     try {
         if (!m_camera)
         {
-            m_camera = new IDSCamera();
+            if (m_test)
+                m_camera = new TestCamera(760, 480);
+            else
+                m_camera = new IDSCamera();
         }
         else
         {
@@ -192,7 +196,7 @@ void Worker::start()
     int tries = 0;
     m_running = true;
 
-    initialize();
+    initialize(true);
 
     while (!m_stop)
     {

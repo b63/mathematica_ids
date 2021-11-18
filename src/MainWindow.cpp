@@ -13,7 +13,7 @@
 #include "Display.h"
 
 
-MainWindow::MainWindow(QWidget* parent)
+MainWindow::MainWindow(QWidget* parent, bool test)
     : QMainWindow(parent)
 {
     QWidget* widget = new QWidget(this);
@@ -31,7 +31,7 @@ MainWindow::MainWindow(QWidget* parent)
     m_layout->addWidget(m_display);
 
     // Create worker thread that waits for new images from the camera
-    m_worker = new Worker();
+    m_worker = new Worker(nullptr, test);
     m_worker->moveToThread(&m_thread);
 
     // worker must be started, when the acquisition starts, and deleted, when the worker thread finishes
