@@ -16,6 +16,7 @@ public:
     Worker(QObject* parent = nullptr, bool test = false);
     void initialize(bool full = false);
     void deinitialize();
+    void toggle_camera();
 
     ~Worker();
 
@@ -28,11 +29,12 @@ signals:
     void display_image(QImage img);
 
 private:
-    bool m_stop       = false;
-    bool m_poll_wstp  = true;
-    bool m_running    = false;
-    bool m_test       = false;
-    int m_reset       = 0;
+    bool m_stop        = false;
+    bool m_poll_wstp   = true;
+    bool m_running     = false;
+    bool m_test        = false;
+    bool m_camera_flag = false;
+    int m_reset        = 0;
     Camera *m_camera;
     MathematicaL m_link;
 
