@@ -87,6 +87,10 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     {
         toggle_title_bar(!m_title);
     }
+    else if (k == Qt::Key_C)
+    {
+        m_worker->toggle_camera();
+    }
     else
     {
         QMainWindow::keyPressEvent(event);

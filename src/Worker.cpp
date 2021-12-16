@@ -1,4 +1,5 @@
 #include <cmath>
+#include <cstdio>
 #include <cstring>
 #include <exception>
 #include <thread>
@@ -56,6 +57,37 @@ Worker::Worker(QObject* parent, bool test)
             m_cropw = w;
             m_croph = h;
         });
+
+}
+
+void toggle_camera()
+{
+    if (!m_camera)
+    {
+        printf(stderr, "error: worker not initialized\n");
+        return;
+    }
+
+    bool prev = m_camera_flag;
+    try {
+        if (m_camera_flag)
+        {
+            m_camera->deinitialize();
+            m_camera_flag = false;
+        }
+        else
+        {
+            m_camera->initialize();
+            m_camera_flag = true;
+        }
+    } catch (const char *e) {
+         m_camera_flag = prev;
+         fprintf(stderr, "Worker: failed to toggle camera - %s\n",e);
+    } catch (const std::exception &e) {
+         m_camera_flag = prev;
+         fprintf(stderr, "Worker: failed to toggle camera - %s\n",e.what());
+    } 
+
 
 }
 
@@ -160,6 +192,7 @@ void Worker::initialize(bool full)
 
         printf("initialzing camera\n");
         m_camera->initialize();
+        m_camera_flag = true;
     } catch (const char *e) {
         fprintf(stderr, "Worker: failed to initialize camera - %s\n", e);
     } catch (std::exception &e) {
