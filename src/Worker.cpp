@@ -60,13 +60,14 @@ Worker::Worker(QObject* parent, bool test)
 
 }
 
-void toggle_camera()
+void Worker::toggle_camera()
 {
     if (!m_camera)
     {
-        printf(stderr, "error: worker not initialized\n");
+        fprintf(stderr, "error: worker not initialized\n");
         return;
     }
+    printf("Worker: toggling camera\n");
 
     bool prev = m_camera_flag;
     try {
